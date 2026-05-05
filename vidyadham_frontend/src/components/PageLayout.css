@@ -1,0 +1,24 @@
+/* ============================================
+   PAGE LAYOUT
+   ============================================ */
+
+.page-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #0a0a1a;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.page-main {
+  flex: 1;
+  margin-left: 260px;
+  padding: 32px 40px;
+  max-width: 1100px;
+}
+
+@media (max-width: 900px) {
+  .page-main {
+    margin-left: 0;
+    padding: 24px 20px;
+  }
+}
