@@ -1,0 +1,24 @@
+services:
+  backend:
+    build:
+      context: ./vidyadham_backend
+    platform: linux/amd64
+    container_name: vidyadham_backend
+    env_file:
+      - ./vidyadham_backend/.env
+    ports:
+      - "5001:5001"
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./vidyadham_frontend
+    platform: linux/amd64
+    env_file:
+      - ./vidyadham_frontend/.env
+    container_name: vidyadham_frontend
+    depends_on:
+      - backend
+    ports:
+      - "3000:80"
+    restart: unless-stopped

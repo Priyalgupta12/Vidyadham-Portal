@@ -1,0 +1,4 @@
+/* App-level layout — minimal since pages handle their own styles */
+.app {
+  min-height: 100vh;
+}
